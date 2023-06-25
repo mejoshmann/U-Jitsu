@@ -1,0 +1,204 @@
+* {
+    // border: 1px solid black;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    &__account {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+
+    &__back {
+        height: 1.5rem;
+        border: 0;
+        background-color: #fff;
+        font-size: 1rem;
+        cursor: pointer;
+        background-color: #eee;
+        border-radius: 4px;
+        padding: .3rem;
+    }
+    &__back:hover {
+        // Background color transition
+    }
+
+    &__myProfile {
+        margin-left: 1rem;
+    }
+}
+
+.proForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    
+
+    &__userName {
+        height: 2rem;
+        border-radius: 4px;
+        // border: 1px solid black;
+        width: 100%;
+        // background-color: #eee;
+        // opacity: .6;
+    }
+    // Make into mixin
+    &__name {
+        border-radius: 4px;
+        margin-left: 1rem;
+        height: 100%;
+        padding: .2rem;
+        border: 0;
+        background-color: #eee;
+        
+        // width: 80%;
+    }
+
+    &__belt--container,
+    &__yrBtns,
+    &__genCont {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__belt {
+        background-color: #eee;
+        border-radius: 4px;
+        margin: .1rem;
+        padding: .3rem;
+    }
+
+    &__belt,
+    &__experience--radios {
+        width: 100%;
+        text-align: center;
+    }
+
+    &__belt--radio,
+    &__yrRadio {
+        width: 100%;
+        
+
+    }
+
+    &__experience {
+
+    }
+
+    &__experience--radios {
+        background-color: #eee;
+        border-radius: 4px;
+        margin: .1rem;
+        padding: .2rem;
+    }
+
+
+    &__yrRadio {
+        border: 1px solid black;
+        padding: 1rem;
+
+    }
+
+    &__gender {
+        width: 48%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #eee;
+        border-radius: 4px;
+        height: 2rem;
+        padding: .5rem;
+    }
+
+   
+
+    &__age {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__slider {
+        width: 15rem;
+        margin-left: 1rem;
+    }
+
+    &__location {
+
+    }
+
+    &__localInput {
+        border-radius: 4px;
+        margin-left: 1rem;
+        height: 100%;
+        padding: .2rem;
+        border: 0;
+        background-color: #eee;
+
+    }
+
+    &__school {
+
+    }
+
+    &__academy {
+        border-radius: 4px;
+        margin-left: 1rem;
+        height: 100%;
+        padding: .2rem;
+        border: 0;
+        background-color: #eee;
+        width: 80%;
+    }
+
+
+
+    &__bio {
+        width: 100%;
+    }
+
+    &__bioInput{
+        border-radius: 4px;
+        margin-left: 1rem;
+        height: 3rem;
+        border: 0;
+        background-color: #eee;
+        width: 90%;
+    }
+
+    &__bioInput::placeholder {
+       padding: .2rem;
+    }
+
+    &__bioInput:placeholder-shown {
+        padding: 1rem;
+    }
+
+   
+
+
+    &__academy::placeholder,
+    &__localInput::placeholder {
+        padding: 0 1rem;
+        color: #413F42;
+    }
+
+    &__submitBtn {
+        width: 100%;
+        padding: .5rem;
+        border-radius: 4px;
+        border: 0;
+        background-color: #99DBF5;
+
+    }
+
+   
+}
+

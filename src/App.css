@@ -1,0 +1,13 @@
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.mainContainer {
+    flex-grow: 1;
+    height: calc(100vh - 9.8rem);
+    overflow-y: auto;
+    padding: 0 1rem;
+}

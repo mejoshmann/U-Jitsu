@@ -1,0 +1,64 @@
+@import "../../styles/partials/colors";
+@import "../../styles/mixins/mixins";
+
+.nav {
+    height: 5rem;
+    // border: 1px solid #000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background: #fff;
+    box-shadow:  10px 10px 50px #bebebe,
+                 -20px -20px 60px #ffffff;
+    
+
+&__home {
+    background-image: url(../../assets/icons/home.png);
+    // @use nav-buttons;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #000;
+    width: 2rem;
+    height: 2rem;
+}
+
+&__activity {
+    background-image: url(../../assets/icons/exercise.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #000;
+    width: 2rem;
+    height: 2rem;
+}
+
+&__add {
+    background-image: url(../../assets/icons/more.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #000;
+    width: 2rem;
+    height: 2rem;
+}
+
+&__knowledge {
+    background-image: url(../../assets/icons/book.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #000;
+    width: 2rem;
+    height: 2rem;
+}
+
+&__profile {
+    background-image: url(../../assets/icons/user.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: #000;
+    width: 2rem;
+    height: 2rem;
+}
+
+}
