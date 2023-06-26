@@ -1,4 +1,5 @@
 import { _useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import "./ProfileData.scss";
 
@@ -37,7 +38,7 @@ function ProfileData() {
     <>
       <div className="profile">
         <div className="profile__account">
-          <button className="profile__back">{`< Account`}</button>
+         <Link to="/Settings"><button className="profile__back">{`< Account`}</button></Link>
           <h2 className="profile__myProfile">My Profile</h2>
         </div>
         <form action="post" className="proForm" onSubmit={handleSubmit}>

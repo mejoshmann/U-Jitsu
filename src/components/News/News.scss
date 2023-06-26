@@ -1,5 +1,17 @@
 .news {
     border: 1px solid black;
     height: 9rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+
+    &__comps {
+        border: 1px solid black;
+        width: 49%;
+        height: 100%;
+    }
+
+    
 }
 

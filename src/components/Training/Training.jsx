@@ -88,7 +88,7 @@ function Training() {
             <div className="form__button-container">
               <button type="button" className="form__button--move" value="Single Leg"
               onClick={(e) => setTrainData({...trainData, takedowns: "Single Leg"})} 
-              >Single Leg/</button>
+              >Single Leg</button>
               <button type="button" className="form__button--move" value="Double Leg"
               onClick={(e) => setTrainData({...trainData, takedowns: "Double Leg"})} 
               >Double Leg</button>
@@ -172,7 +172,7 @@ function Training() {
         </div>
 
         <label htmlFor="journal" className="form__journal">
-          <textarea type="text" className="form__journal-input" 
+          <textarea type="text" className="form__journal-input" placeholder="Daily Journal"
           onChange={(e) => setTrainData({...trainData, journal: e.target.value})} />
         </label>
         <label htmlFor="submit" className="form__submit">

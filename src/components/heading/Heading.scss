@@ -11,26 +11,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 2rem;
-    
-    &__icon {
-        width: 5rem;
-        height: 1.2rem;
-        background-color: #0745bb;
-        border: 1px solid black;
-        border-radius: 4px;
-    }
 
-    &__black {
-        width: 1.8rem;
-        height: 1.1rem;
-        border: 1px solid black;
-        border-radius: 1px;
-        margin-left: .6rem;
-        background-color: #000;
+    &__icon {
+        background-image: url(../../assets/icons/userbkgrnd.png);
+        background-size: contain;
+        width: 3.5rem;
+        height: 3.5rem;
     }
 
     &__logo {
-        width: 40%;
     }
 
     &__setting {
