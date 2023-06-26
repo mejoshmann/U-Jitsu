@@ -22,16 +22,7 @@ function Today() {
 
  
 
-  const handleDayClick = (index) => {
-    const selectedData = trainingData[nextSevenDays[index].index];
-    if (selectedData) {
-      setHours(selectedData.hours);
-      setPositions(selectedData.positions);
-      setJournal(selectedData.journal);
-    } else {
-      console.error("No training data available for this day.");
-    }
-  };
+  
 
   useEffect(() => {
     axios
@@ -51,7 +42,18 @@ function Today() {
        .catch((error) => {
           console.error("No training data available for today.");
       });
-  }, []);
+  }, [offset, today]);
+
+  const handleDayClick = (index) => {
+    const selectedData = trainingData.find((data) => data.date === nextSevenDays[index].date.toDateString());
+    if (selectedData) {
+      setHours(selectedData.hours);
+      setPositions(selectedData.positions);
+      setJournal(selectedData.journal);
+    } else {
+      console.error("No training data available for this day.");
+    }
+  };
 
   return (
     <>

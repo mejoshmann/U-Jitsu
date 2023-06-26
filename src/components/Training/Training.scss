@@ -1,3 +1,11 @@
+.train__heading {
+  // border: 1px solid black;
+}
+
+.highlighted {
+  background-color: blue;
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -10,6 +18,7 @@
 
   &__toggle--noGi {
     padding: .2rem 4rem;
+    white-space: nowrap;
   }
 
   &__hours {
@@ -40,6 +49,10 @@
     border: 0;
     background: #e0e0e0;
     padding: 1rem;
+  }
+
+  &__button--move:active {
+    background-color: red;
   }
 
   &__button--move {

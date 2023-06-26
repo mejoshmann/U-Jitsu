@@ -1,10 +1,9 @@
-import { _useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./ProfileData.scss";
 
 function ProfileData() {
-
   const [formData, setFormData] = useState({
     name: "",
     belt: "",
@@ -15,7 +14,23 @@ function ProfileData() {
     school: "",
     bio: "",
   });
-  
+
+  useEffect(() => {
+    const storedFormData = localStorage.getItem("formData");
+    if (storedFormData) {
+      try {
+      setFormData(JSON.parse(storedFormData));
+    } catch (error) {
+      console.error("Error parsing stored data", error)
+    }
+  }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("formData", JSON.stringify(formData));
+  }, [formData]);
+
+
 
 
 
@@ -38,10 +53,10 @@ function ProfileData() {
     <>
       <div className="profile">
         <div className="profile__account">
-         <Link to="/Settings"><button className="profile__back">{`< Account`}</button></Link>
+         <Link to="/Settings"><button className="profile__back">&lt; Account</button></Link>
           <h2 className="profile__myProfile">My Profile</h2>
         </div>
-        <form action="post" className="proForm" onSubmit={handleSubmit}>
+        <form className="proForm" onSubmit={handleSubmit}>
           <label htmlFor="name" className="proForm__userName">
             User Name
             <input
@@ -51,7 +66,8 @@ function ProfileData() {
               placeholder="Enter your name"
               value={formData.name}
               onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
+                setFormData({ ...formData, name: e.target.value})
+                
               }
             />
           </label>

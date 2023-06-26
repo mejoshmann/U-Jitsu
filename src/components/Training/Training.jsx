@@ -19,7 +19,7 @@ function Training() {
     submissions: "",
     movements: "",
     gi: "",
-    nogi: "",
+
   });
 
   
@@ -27,22 +27,37 @@ function Training() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (
+      !trainData.hours &&
+      !trainData.takedowns &&
+      !trainData.positions &&
+      !trainData.submissions &&
+      !trainData.movements &&
+      !trainData.journal
+    ) {
+      alert("Please select at least one option.");
+      return;
+    }
+
     axios
     .post("http://localhost:1080/training", trainData)
     .then((response) => {
       console.log("Training sent successfully", response.data);
+      console.log("response", response)
     })
     .catch((error) => {
       console.error("Error sending Training data: ", error);
     });
+    alert("Training Successfully Submitted");
   };
-  // const [toggled, setToggled] = useState(false);
+  
   const [showButtons, setShowButtons] = useState({
     button1: false,
     button2: false,
     button3: false,
     button4: false,
   });
+
 
   const handleButtonClick = (buttonName, e) => {
     e.preventDefault();
@@ -56,11 +71,13 @@ function Training() {
     setTrainData((prevState) => ({
       ...prevState,
       gi: !prevState.gi,
+      noGi: !prevState.noGi,
     }));
   }
 
   return (
     <>
+    <h3 className="train__heading">Lets Add your training</h3>
       <form action="post" className="form" onSubmit={handleSubmit}>
         <div className="form__date">{formattedDate}</div>
         <label className="form__toggle">
@@ -69,7 +86,7 @@ function Training() {
             onClick={handleToggle}
           >
             <div className="slider"></div>
-            <p className="form__toggle--noGi">{trainData.noGi ? "No Gi" : "Gi"}</p>
+            <p className="form__toggle--noGi">{trainData.gi ? "No Gi" : "Gi"}</p>
           </div>
         </label>
         <label className="form__hours">Hours Trained
@@ -87,7 +104,7 @@ function Training() {
           {showButtons.button1 && (
             <div className="form__button-container">
               <button type="button" className="form__button--move" value="Single Leg"
-              onClick={(e) => setTrainData({...trainData, takedowns: "Single Leg"})} 
+              onClick={(e) => setTrainData({...trainData, takedowns: "Single Leg"})}
               >Single Leg</button>
               <button type="button" className="form__button--move" value="Double Leg"
               onClick={(e) => setTrainData({...trainData, takedowns: "Double Leg"})} 

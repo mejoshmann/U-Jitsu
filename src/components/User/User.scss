@@ -1,11 +1,32 @@
 .user {
     padding: .5rem 0;
 
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     &__greeting{
         font-size: 1.4rem;
     }
 
     &__heading {
         font-size: 1.3rem;
+    }
+
+    &__belt {
+        border: 1px solid black;
+        width: 7rem;
+        height: 1.2rem;
+        border-radius: 4px;
+    }
+
+    &__belt-tip {
+        width: 2rem;
+        height: 100%;
+        background-color: #000;
+        margin-left: 1rem;
+        border-radius: 1px;
     }
 }
