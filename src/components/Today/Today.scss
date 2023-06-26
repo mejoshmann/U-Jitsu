@@ -1,82 +1,109 @@
+@use "../../styles/partials/mixins" as *;
+
+
+.days {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem 1rem;
+
+  &__day {
+    text-align: center;
+    width: 3rem;
+    height: 5.5rem;
+    border-radius: 14px;
+    background: #e0e0e0;
+    box-shadow: 5px 5px 20px #bebebe, -5px -5px 20px #ffffff;
+    padding: 1rem 0;
+  }
+
+  &__day:hover,
+  &__day:focus {
+    background-color: #0a6ebd;
+  }
+
+  &__leftBtn {
+   @include today-btn;
+  }
+
+  &__rightBtn {
+  @include today-btn;
+  right: .9rem;
+  }
+}
+
+.current-day {
+  background-color: #9ac5f4;
+}
+
 .today {
-    height: 20rem;
-    margin: 1rem;
+  height: 20rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+
+  &__leftCont {
+    width: 50%;
+    background-image: url("../../assets/images/takedown.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0.1rem;
+  }
+
+  &__rightCont {
+    width: 50%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
 
+  &__hours {
+    height: 3.5rem;
+    @include today-box;
+  
+  }
 
-    &__leftCont {
-        width: 50%;
-        background-image:url('../../assets/images/takedown.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: .1rem;
-        
-    }
+  &__positions {
+    @include today-box;
+    height: 4rem;
+ 
+  }
 
-    &__rightCont {
-        border: 1px solid black;
-        width: 50%;
-    }
-
-    &__hours {
-        width: 100%;
-        height: 3rem;
-        border: 1px solid black;
-    }
-
-    &__positions {
-        width: 100%;
-        height: 3rem;
-        border: 1px solid black;
-
-
-    }
-
-    &__positions--trained {
-        width: 100%;
-        height: 3rem;
-        border: 1px solid black;
-    }
-
+  &__positions--trained {
+    @include today-box;
+    height: 6rem;
+  }
 }
 
 .blob {
-    position: absolute;
-    width: 18rem;
-    height: 18rem;
-    background: linear-gradient(
-      180deg,
-      rgba(47, 184, 255,0.42) 31.77%,
-      #5c9df1 100%
-    );
-    mix-blend-mode: color-dodge;
-    -webkit-animation: move 25s infinite alternate;
-            animation: move 25s infinite alternate;
-    transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
-  }
+  position: relative;
+  width: 12rem;
+  height: 12rem;
+  background: linear-gradient(
+    180deg,
+    rgba(47, 184, 255, 0.42) 31.77%,
+    #5c9df1 100%
+  );
+  mix-blend-mode: color-dodge;
+  -webkit-animation: move 25s infinite alternate;
+  animation: move 25s infinite alternate;
+  transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
+}
 
-  
-  @-webkit-keyframes move {
-    from {
-    //   transform: translate(-100px, -50px) rotate(-90deg);
-      border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
-    }
-  
-    to {
-    //   transform: translate(500px, 100px) rotate(-10deg);
-      border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
-    }
+@-webkit-keyframes move {
+  from {
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
   }
-  
-  @keyframes move {
-    from {
-    //   transform: translate(-100px, -50px) rotate(-90deg);
-      border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
-    }
-  
-    to {
-    //   transform: translate(500px, 100px) rotate(-10deg);
-      border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
-    }
+  to {
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
   }
+}
+
+@keyframes move {
+  from {
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+  to {
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}

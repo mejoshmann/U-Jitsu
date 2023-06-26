@@ -1,5 +1,63 @@
 .news {
-    border: 1px solid black;
     height: 9rem;
+    gap: 1rem;
+    background-color: #eee;
+    border-radius: 4px;
+    padding: .5rem;
+    height: fit-content;
+    
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+    }
+
+    &__upcoming {
+        padding: .4rem .2rem;
+    }
+
+
+    &__comps {
+        border-radius: 4px;
+        width: 50%;
+        height: 100%;
+     
+    }
+
+    &__heading {
+        font-size: 1.2rem;
+        height: 3.5rem;
+        padding: .2rem;
+        background-color: #99DBF5;
+    }
+
+    &__local {
+        font-size: .89rem;
+
+    }
+
+    &__data {
+        background-color: #fff;
+        height: 4.5rem;
+        padding: .3rem;
+        border-radius: 4px;
+    }
+
+    &__register {
+        padding: .2rem;
+        background-color: #0693e3;
+        border: 0;
+        color: #fff;
+        border-radius: 4px;
+        width: 100%;
+        text-align: center;
+        margin: .2rem 0;
+    }
+
+    
+
+    
 }
 

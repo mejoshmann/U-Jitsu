@@ -14,7 +14,7 @@ function Knowledge() {
           <Link to="/Positions" className="knowledge__icon positions">Positions</Link>
           <Link to="/Submissions" className="knowledge__icon submissions">Submissions</Link>
           <Link to="/Joints" className="knowledge__icon movements">Joint Locks</Link>
-          <Link to="/Videos" className="knowledge__icon videos">Videos</Link>
+          <div to="/Videos" className="knowledge__icon videos">Videos</div>
         </div>
       </div>
     </>

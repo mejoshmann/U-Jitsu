@@ -1,16 +1,24 @@
+.train__heading {
+  // border: 1px solid black;
+}
+
+.highlighted {
+  background-color: blue;
+}
+
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid green;
-  margin: 1rem;
-  height: 72vh;
+  justify-content: space-evenly;
+  height: 80vh;
 
   &__toggle {
-    border: 1px solid green;
+    // border: 1px solid green;
   }
 
   &__toggle--noGi {
+    padding: .2rem 4rem;
+    white-space: nowrap;
   }
 
   &__hours {
@@ -21,19 +29,30 @@
   }
 
   &__positions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .4rem;
+
   }
+
 
   &__button {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 5rem;
-    width: 5rem;
-    border-radius: 50%;
+    justify-content: center;
+    align-items: left;
+    height: 4rem;
+    width: 100%;
+    border-top-right-radius: 25px;
     border: 0;
     background: #e0e0e0;
-    box-shadow: 5px 5px 60px #bebebe, -20px -20px 60px #ffffff;
+    padding: 1rem;
+  }
 
+  &__button--move:active {
+    background-color: red;
   }
 
   &__button--move {
@@ -41,18 +60,41 @@
   }
 
   &__button-container {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+  }
 
+  &__button--move {
+    padding: 1rem;
+    margin: 0 .2rem;
+    width: 25%;
   }
 
   &__journal {
-    width: 100%;
+    // width: 100%;
   }
 
   &__journal-input {
     resize: none;
-    width: 99%;
+    width: 100%;
     height: 5rem;
+    border-radius: 4px;
+    background-color: #eee;
+    color: #65647C;
+    padding: .5rem;
+    font-size: 1rem;
+    border: 0;
+  }
 
+  &__submit--button {
+    width: 100%;
+    height: 2.5rem;
+    color: #fff;
+    background-color: #0693e3;
+    font-size: 1rem;
+    border: 0;
+    border-radius: 4px;
   }
 }
 

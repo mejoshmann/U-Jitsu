@@ -32,7 +32,7 @@ function SignUp() {
         <div className="signup__terms">
           <p className="signup__forgot">Forgot password?</p>
 
-          <p className="signup__termsCond">Terms & Conditions Privacy Policy</p>
+          <p className="signup__termsCond">Terms & Conditions, Privacy Policy</p>
         </div>
       </div>
     </>

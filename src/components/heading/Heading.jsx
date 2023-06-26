@@ -4,10 +4,9 @@ import './Heading.scss';
 function Heading() {
     return(
         <div className="heading">
-            <div className="heading__icon">
-                <div className="heading__black"></div>
+           <div className="heading__icon">
             </div>
-           <h1 className="heading__logo">U-Jitsu</h1>
+          <Link className="heading__logo" to="/Home"><h1 >U-Jitsu</h1></Link>
            <Link to="/Settings"> <div className="heading__setting"></div></Link>
         </div>
     )

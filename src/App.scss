@@ -1,4 +1,7 @@
-@import "../src/styles/partials/fonts";
-@import "../src/styles/partials/colors";
+@import "../src/styles/partials/_colors.scss";
+@import "../src/styles/partials/_fonts.scss";
+@import "../src/styles/partials/_mixins.scss";
 
-@use 
+.App {
+    font-family: "Oswald", sans-serif;
+}

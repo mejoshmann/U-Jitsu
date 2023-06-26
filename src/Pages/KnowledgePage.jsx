@@ -1,11 +1,9 @@
 function KnowledgePage() {
-    return(
-        <>
-            
-            <Knowledge/>
-        
-        </>
-    )
+  return (
+    <>
+      <Knowledge />
+    </>
+  );
 }
 
 export default KnowledgePage;
