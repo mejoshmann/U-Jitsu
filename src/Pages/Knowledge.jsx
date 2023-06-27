@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import "./Knowledge.scss";
-
+import "../components/Knowledge/Knowledge.scss"
 
 function Knowledge() {
 

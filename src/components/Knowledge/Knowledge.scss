@@ -1,19 +1,13 @@
-* {
-    // border: 1px solid black;
-}
-
 .knowledge {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
 
-    
-&__heading {
-    text-align: center;
+  &__heading {
     font-size: 1.5rem;
-}
+    padding: 0.2rem ;
+  }
 
   &__container {
     display: flex;
@@ -22,33 +16,22 @@
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
-    padding:  1rem;
-    // border: 1px solid black;
     height: 100%;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-    border-bottom: 0;
-    box-shadow: 5px 5px 20px #bebebe,
-               -15px -15px 30px #ffffff;
-
   }
 
   &__icon {
-    background-color: #C4DFDF;
-    width: 45%;
-    height: 30%;
+    background-color: #ebf2f4;
+    width: 48%;
+    height: 50%;
     text-align: center;
     text-decoration: none;
-    color: #65647C;
+    color: #65647c;
     padding: 4rem 0;
-    border-radius: 4px;
-    background: rgb(236, 236, 236);
-    // box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 2px, 
-    // rgba(0, 0, 0, 0.3) 0px 5px 10px -3px,
-    //  rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    border-radius: 25px;
+    background: #ebf2f4;
+    box-shadow: 1px 1px 1px #eee, -1px -1px 12px #eee;
   }
 
   &__icon:hover {
-
   }
 }

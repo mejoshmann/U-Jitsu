@@ -1,7 +1,29 @@
-@import "../src/styles/partials/_colors.scss";
-@import "../src/styles/partials/_fonts.scss";
-@import "../src/styles/partials/_mixins.scss";
+@use "./styles/partials/_fonts.scss" as *;
+@use "./styles/partials/mixins" as *;
+
+* {
+    padding: 0;
+    margin: 0;   
+    box-sizing: border-box;
+}
 
 .App {
-    font-family: "Oswald", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+   
+    @include tablet {
+        width: 50%;
+    }
+}
+
+.mainContainer {
+    flex-grow: 1;
+    height: calc(100vh - 12rem);
+    overflow-y: auto;
+    padding: 0.5rem 1rem;
+    border-top-right-radius: 25px;
+    border-top-left-radius:  25px;
+    background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
 }

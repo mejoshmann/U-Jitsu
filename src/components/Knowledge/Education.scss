@@ -17,11 +17,12 @@
     }
 
     &__heading {
-
     }
 
     &__container {
-
+        border-radius: 25px;
+        background: #eee;
+        padding: 1rem;
     }
 
     &__headCont {
@@ -29,8 +30,7 @@
         flex-direction: row;
         align-items: baseline;
         justify-content: space-between;
-        background-color: #eee;
-        padding: .2rem;
+        border-radius: 25px;
     }
 
     &__heading {
