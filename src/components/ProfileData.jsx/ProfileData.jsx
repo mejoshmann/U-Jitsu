@@ -275,7 +275,7 @@ function ProfileData() {
               {formData.age}
             </p>
           </label>
-          <label htmlFor="location" className="proForm__location">
+          <label htmlFor="location" className="proForm__bio">
             Location
             <input
               type="text"
@@ -288,7 +288,7 @@ function ProfileData() {
               }
             />
           </label>
-          <label htmlFor="school" className="proForm__school">
+          <label htmlFor="school" className="proForm__bio">
             School
             <input
               type="text"

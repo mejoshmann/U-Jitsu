@@ -9,8 +9,8 @@
 
   &__day {
     text-align: center;
-    width: 3rem;
-    height: 5.5rem;
+    width: 2.8rem;
+    height: 4.5rem;
     border-radius: 14px;
     background: #e0e0e0;
     box-shadow: 5px 5px 20px #bebebe, -5px -5px 20px #ffffff;
@@ -54,12 +54,14 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 1.5rem 0;
   }
 
   &__hours {
     height: 3.5rem;
     @include today-box;
+    padding: .2rem;
   
   }
 
@@ -75,35 +77,3 @@
   }
 }
 
-.blob {
-  position: relative;
-  width: 12rem;
-  height: 12rem;
-  background: linear-gradient(
-    180deg,
-    rgba(47, 184, 255, 0.42) 31.77%,
-    #5c9df1 100%
-  );
-  mix-blend-mode: color-dodge;
-  -webkit-animation: move 25s infinite alternate;
-  animation: move 25s infinite alternate;
-  transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1);
-}
-
-@-webkit-keyframes move {
-  from {
-    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
-  }
-  to {
-    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
-  }
-}
-
-@keyframes move {
-  from {
-    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
-  }
-  to {
-    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
-  }
-}

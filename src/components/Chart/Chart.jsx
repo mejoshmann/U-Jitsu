@@ -1,4 +1,3 @@
-import React, { PureComponent } from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import {
@@ -38,7 +37,7 @@ function Chart() {
 
   return (
     <div className="barChart">
-      <ResponsiveContainer>
+      <ResponsiveContainer className="responsive">
         <ComposedChart data={chartData}>
           <XAxis dataKey="day" />
           <YAxis dataKey="hours" />
