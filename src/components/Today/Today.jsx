@@ -89,7 +89,7 @@ function Today() {
                 You trained {trainingData.training[0]?.hours} hours today
               </h4>
               <h4 className="today__positions">
-                Positions trained: {trainingData.training[0]?.positions}
+                Positions trained: {trainingData.training[0]?.positions}, {trainingData.training[0]?.submissions}
               </h4>
               <h5 className="today__positions--trained">
                 Journal: {trainingData.training[0]?.journal}
