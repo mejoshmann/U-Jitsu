@@ -10,7 +10,9 @@ Installation
 1. Clone or download U-jitsu and U-jitsu backend repos
 
 2. Open the front and backend code
-      run npm install for both
-      run npm start for both
 
-3. Enjoy!
+3. run npm install for both
+   
+4. run npm start for both
+
+5. Enjoy!
