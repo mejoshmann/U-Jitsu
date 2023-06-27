@@ -145,6 +145,12 @@
         background-color: #99DBF5;
     }
 
+    &__delete:active,
+    &__logout:active {
+        background-color: #2a7aa2;
+        color: #fff;
+    }
+
 
 
     

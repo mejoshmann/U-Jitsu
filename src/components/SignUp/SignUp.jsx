@@ -11,7 +11,7 @@ function SignUp() {
         </div>
         <form action="post" className="signup__form">
           <label htmlFor="email" className="signup__eLabel">
-            <input type="email" id="email" className="signup__input" placeholder="Email" />
+            <input type="email" id="email" className="signup__input" placeholder="Email" required/>
           </label>
           <label htmlFor="password" className="signup__ePassword">
             <input
@@ -19,6 +19,7 @@ function SignUp() {
               id="password"
               className="signup__input"
               placeholder="Password"
+              required
             />
           </label>
           <Link to="/Home">

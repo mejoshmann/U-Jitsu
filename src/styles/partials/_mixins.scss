@@ -1,6 +1,12 @@
+$phone-width: 464px;
 $tablet-width: 768px;
 $desktop-width: 1280px;
 
+@mixin phone{
+    @media (min-width: $phone-width ) {
+        @content;
+}
+}
 @mixin tablet {
     @media(min-width: $tablet-width) {
         @content;
@@ -12,6 +18,8 @@ $desktop-width: 1280px;
         @content;
     }
 }
+
+
 
 @mixin nav-buttons {
     background-repeat: no-repeat;
